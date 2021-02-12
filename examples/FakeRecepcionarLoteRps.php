@@ -4,10 +4,10 @@ ini_set('display_errors', 'On');
 require_once '../bootstrap.php';
 
 use NFePHP\Common\Certificate;
-use NFePHP\NFSeGinfes\Common\FakePretty;
-use NFePHP\NFSeGinfes\Common\Soap\SoapFake;
-use NFePHP\NFSeGinfes\Rps;
-use NFePHP\NFSeGinfes\Tools;
+use NFePHP\NFSeSJP\Common\FakePretty;
+use NFePHP\NFSeSJP\Common\Soap\SoapFake;
+use NFePHP\NFSeSJP\Rps;
+use NFePHP\NFSeSJP\Tools;
 
 try {
 
