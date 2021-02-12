@@ -1,6 +1,6 @@
 <?php
 
-namespace NFePHP\NFSeGinfes\Common;
+namespace NFePHP\NFSeSJP\Common;
 
 /**
  * Class for identification of eletronic documents in xml
