@@ -4,12 +4,13 @@ ini_set('display_errors', 'On');
 require_once '../bootstrap.php';
 
 use NFePHP\Common\Certificate;
-use NFePHP\NFSeGinfes\Common\FakePretty;
-use NFePHP\NFSeGinfes\Common\Soap\SoapFake;
-use NFePHP\NFSeGinfes\Tools;
+use NFePHP\NFSeSJP\Common\FakePretty;
+use NFePHP\NFSeSJP\Common\Soap\SoapFake;
+use NFePHP\NFSeSJP\Tools;
 
 try {
-
+/*
+SAO JOSE NAO CANCELA
     $config = [
         'cnpj' => '99999999000191',
         'im' => '1733160024',
@@ -37,7 +38,7 @@ try {
     $response = $tools->cancelarNfse($numero, $tools::ERRO_EMISSAO, $id, $versao);
 
     echo FakePretty::prettyPrint($response, '');
-
+*/
 } catch (\Exception $e) {
     echo $e->getMessage();
 }
