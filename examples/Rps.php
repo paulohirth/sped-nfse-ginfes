@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 require_once '../bootstrap.php';
 
-use NFePHP\NFSeGinfes\Rps;
+use NFePHP\NFSeSJP\Rps;
 
 $std = new \stdClass();
 $std->version = '1.00'; //indica qual JsonSchema USAR na validação
