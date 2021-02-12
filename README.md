@@ -20,7 +20,7 @@ Não deixe de se cadastrar no [grupo de discussão do NFePHP](http://groups.goog
 
 |n|Município|UF|Ibge|
 |:---:|:---|:---:|:---:|
-|1|SAO JOSE DOS PINHAIS|PR|XXX|
+|1|SAO JOSE DOS PINHAIS|PR|4125506|
 
 ## Dependências
 
