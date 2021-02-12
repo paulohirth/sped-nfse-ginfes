@@ -55,8 +55,8 @@ class Tools extends BaseTools
             $rps->config($this->config);
             $content .= $rps->render();
         }
-        $contentmsg = "<EnviarLoteRpsEnvio xmlns=\"http://www.ginfes.com.br/servico_enviar_lote_rps_envio_v03.xsd\">"
-            . "<LoteRps Id=\"$lote\" xmlns:tipos=\"http://www.ginfes.com.br/tipos_v03.xsd\">"
+        $contentmsg = "<EnviarLoteRpsEnvio xmlns=\"http://nfe.sjp.pr.gov.br/servico_enviar_lote_rps_envio_v03.xsd\">"
+            . "<LoteRps Id=\"$lote\" xmlns:tipos=\"http://nfe.sjp.pr.gov.br/tipos_v03.xsd\">"
             . "<tipos:NumeroLote>$lote</tipos:NumeroLote>"
             . "<tipos:Cnpj>" . $this->config->cnpj . "</tipos:Cnpj>"
             . "<tipos:InscricaoMunicipal>" . $this->config->im . "</tipos:InscricaoMunicipal>"
@@ -99,8 +99,8 @@ class Tools extends BaseTools
     {
         $operation = "ConsultarSituacaoLoteRpsV3";
         $content = "<ConsultarSituacaoLoteRpsEnvio "
-            . "xmlns=\"http://www.ginfes.com.br/servico_consultar_situacao_lote_rps_envio_v03.xsd\" "
-            . "xmlns:tipos=\"http://www.ginfes.com.br/tipos_v03.xsd\">"
+            . "xmlns=\"http://nfe.sjp.pr.gov.br/servico_consultar_situacao_lote_rps_envio_v03.xsd\" "
+            . "xmlns:tipos=\"http://nfe.sjp.pr.gov.br/tipos_v03.xsd\">"
             . "<Prestador>"
             . "<tipos:Cnpj>" . $this->config->cnpj . "</tipos:Cnpj>"
             . "<tipos:InscricaoMunicipal>" . $this->config->im . "</tipos:InscricaoMunicipal>"
@@ -134,8 +134,8 @@ class Tools extends BaseTools
     {
         $operation = "ConsultarLoteRpsV3";
         $content = "<ConsultarLoteRpsEnvio "
-            . "xmlns:tipos=\"http://www.ginfes.com.br/tipos_v03.xsd\" "
-            . "xmlns=\"http://www.ginfes.com.br/servico_consultar_lote_rps_envio_v03.xsd\">"
+            . "xmlns:tipos=\"http://nfe.sjp.pr.gov.br/tipos_v03.xsd\" "
+            . "xmlns=\"http://nfe.sjp.pr.gov.br/servico_consultar_lote_rps_envio_v03.xsd\">"
             . "<Prestador>"
             . "<tipos:Cnpj>" . $this->config->cnpj . "</tipos:Cnpj>"
             . "<tipos:InscricaoMunicipal>" . $this->config->im . "</tipos:InscricaoMunicipal>"
@@ -170,8 +170,8 @@ class Tools extends BaseTools
     {
         $operation = 'ConsultarNfseV3';
         $content = "<ConsultarNfseEnvio "
-            . "xmlns=\"http://www.ginfes.com.br/servico_consultar_nfse_envio_v03.xsd\" "
-            . "xmlns:tipos=\"http://www.ginfes.com.br/tipos_v03.xsd\">"
+            . "xmlns=\"http://nfe.sjp.pr.gov.br/servico_consultar_nfse_envio_v03.xsd\" "
+            . "xmlns:tipos=\"http://nfe.sjp.pr.gov.br/tipos_v03.xsd\">"
             . "<Prestador>"
             . "<tipos:Cnpj>" . $this->config->cnpj . "</tipos:Cnpj>"
             . "<tipos:InscricaoMunicipal>" . $this->config->im . "</tipos:InscricaoMunicipal>"
@@ -221,8 +221,8 @@ class Tools extends BaseTools
     {
         $operation = "ConsultarNfsePorRpsV3";
         $content = "<ConsultarNfseRpsEnvio "
-            . "xmlns=\"http://www.ginfes.com.br/servico_consultar_nfse_rps_envio_v03.xsd\" "
-            . "xmlns:tipos=\"http://www.ginfes.com.br/tipos_v03.xsd\">"
+            . "xmlns=\"http://nfe.sjp.pr.gov.br/servico_consultar_nfse_rps_envio_v03.xsd\" "
+            . "xmlns:tipos=\"http://nfe.sjp.pr.gov.br/tipos_v03.xsd\">"
             . "<IdentificacaoRps>"
             . "<tipos:Numero>$numero</tipos:Numero>"
             . "<tipos:Serie>$serie</tipos:Serie>"
@@ -255,33 +255,17 @@ class Tools extends BaseTools
      * @param string $versao
      * @return string
      */
-    public function cancelarNfse($numero, $codigo = self::ERRO_EMISSAO, $id = null, $versao = "2")
-    {
-        if ($versao == "3") {
-            return $this->cancelarNfseV3($numero, $codigo, $id);
-        }
-        return $this->cancelarNfseV2($numero);
-    }
-
-    /**
-     * Solicita o cancelamento de NFSe (SINCRONO)
-     * @param integer $numero
-     * @param integer $codigo
-     * @param string $id
-     * @return string
-     */
-    public function cancelarNfseV3($numero, $codigo = self::ERRO_EMISSAO, $id = null)
+    public function cancelarNfse($numero, $codigo = self::ERRO_EMISSAO, $id = null)
     {
         /*
-         * Versão 3.0 não funciona em Guarulhos
-         */
+        SJP não tem esse serviço habilitado
         if (empty($id)) {
             $id = $numero;
         }
         $operation = 'CancelarNfseV3';
         $xml = "<p:CancelarNfseEnvio "
-            . "xmlns:p=\"http://www.ginfes.com.br/servico_cancelar_nfse_envio_v03.xsd\" "
-            . "xmlns:p1=\"http://www.ginfes.com.br/tipos_v03.xsd\">"
+            . "xmlns:p=\"http://nfe.sjp.pr.gov.br/servico_cancelar_nfse_envio_v03.xsd\" "
+            . "xmlns:p1=\"http://nfe.sjp.pr.gov.br/tipos_v03.xsd\">"
             . "<Pedido>"
             . "<p1:InfPedidoCancelamento Id=\"$id\">"
             . "<p1:IdentificacaoNfse>"
@@ -317,43 +301,8 @@ class Tools extends BaseTools
         Validator::isValid($xml, $this->xsdpath . '/servico_cancelar_nfse_envio_v03.xsd');
         $response = $this->send($content, $operation);
         return $response;
+        */
     }
 
-    /**
-     * Solicita o cancelamento de NFSe (SINCRONO)
-     * @param integer $numero
-     * @param integer $codigo
-     * @param string $id
-     * @return string
-     */
-    public function cancelarNfseV2($numero)
-    {
-        /*
-         * Versão 2.0 funciona em Guarulhos
-         */
-        $operation = 'CancelarNfse';
-        $xml = "<CancelarNfseEnvio "
-            . "xmlns=\"http://www.ginfes.com.br/servico_cancelar_nfse_envio\" "
-            . "xmlns:tipos=\"http://www.ginfes.com.br/tipos\">"
-            . "<Prestador>"
-            . "<tipos:Cnpj>" . $this->config->cnpj . "</tipos:Cnpj>"
-            . "<tipos:InscricaoMunicipal>" . $this->config->im . "</tipos:InscricaoMunicipal>"
-            . "</Prestador>"
-            . "<NumeroNfse>$numero</NumeroNfse>"
-            . "</CancelarNfseEnvio>";
-
-        $content = Signer::sign(
-            $this->certificate,
-            $xml,
-            'CancelarNfseEnvio',
-            '',
-            OPENSSL_ALGO_SHA1,
-            [false, false, null, null]
-        );
-        $content = str_replace(['<?xml version="1.0"?>', '<?xml version="1.0" encoding="UTF-8"?>'], '', $content);
-        Validator::isValid($content, $this->xsdpath . '/servico_cancelar_nfse_envio_v02.xsd');
-        $this->setVersion("2");
-        $response = $this->send($content, $operation);
-        return $response;
-    }
+    
 }
