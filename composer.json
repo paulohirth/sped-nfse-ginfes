@@ -1,15 +1,19 @@
 {
-    "name": "nfephp-org/sped-nfse-ginfes",
+    "name": "nfephp-org/sped-nfse-sjp",
     "type": "library",
-    "description": "API para geração e comunicação de RPS e NFSe no padão Ginfes.",
+    "description": "API para geração e comunicação de RPS e NFSe no padão SJP.",
     "keywords": ["nfe","nfse","sped","nfephp"],
-    "homepage": "https://github.com/nfephp-org/sped-nfse-ginfes",
+    "homepage": "https://github.com/nfephp-org/sped-nfse-sjp",
     "license": ["LGPL-3.0-or-later", "GPL-3.0-or-later", "MIT"],
     "authors": [
         {
             "name": "Roberto L. Machado",
             "email": "linux.rlm@gmail.com.br",
             "homepage": "http://www.nfephp.org",
+            "role": "Developer"
+        },
+        {
+            "name": "Paulo H Hirth",
             "role": "Developer"
         },
         {
@@ -37,12 +41,12 @@
     },
     "autoload": {
         "psr-4": {
-          "NFePHP\\NFSeGinfes\\": "src/"
+          "NFePHP\\NFSeSJP\\": "src/"
         } 
     },
     "autoload-dev": {
         "psr-4": {
-            "NFePHP\\NFSeGinfes\\Tests\\": "tests/"
+            "NFePHP\\NFSeSJP\\Tests\\": "tests/"
         }
     },
     "scripts": {
