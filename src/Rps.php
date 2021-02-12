@@ -1,12 +1,12 @@
 <?php
 
-namespace NFePHP\NFSeGinfes;
+namespace NFePHP\NFSeSJP;
 
 /**
  * Class for RPS construction and validation of data
  *
  * @category  NFePHP
- * @package   NFePHP\NFSeGinfes
+ * @package   NFePHP\NFSeSJP
  * @copyright NFePHP Copyright (c) 2020
  * @license   http://www.gnu.org/licenses/lgpl.txt LGPLv3+
  * @license   https://opensource.org/licenses/MIT MIT
@@ -16,8 +16,8 @@ namespace NFePHP\NFSeGinfes;
  */
 
 use stdClass;
-use NFePHP\NFSeGinfes\RpsInterface;
-use NFePHP\NFSeGinfes\Common\Factory;
+use NFePHP\NFSeSJP\RpsInterface;
+use NFePHP\NFSeSJP\Common\Factory;
 use JsonSchema\Validator as JsonValid;
 
 class Rps implements RpsInterface
