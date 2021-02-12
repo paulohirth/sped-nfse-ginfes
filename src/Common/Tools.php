@@ -1,6 +1,6 @@
 <?php
 
-namespace NFePHP\NFSeGinfes\Common;
+namespace NFePHP\NFSeSJP\Common;
 
 /**
  * Auxiar Tools Class for comunications with NFSe webserver in Ginfes Standard
@@ -17,8 +17,8 @@ namespace NFePHP\NFSeGinfes\Common;
 
 use NFePHP\Common\Certificate;
 use NFePHP\Common\DOMImproved as Dom;
-use NFePHP\NFSeGinfes\Common\Soap\SoapCurl;
-use NFePHP\NFSeGinfes\Common\Soap\SoapInterface;
+use NFePHP\NFSeSJP\Common\Soap\SoapCurl;
+use NFePHP\NFSeSJP\Common\Soap\SoapInterface;
 
 class Tools
 {
