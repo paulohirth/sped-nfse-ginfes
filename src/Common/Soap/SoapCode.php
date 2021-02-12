@@ -1,6 +1,6 @@
 <?php
 
-namespace NFePHP\NFSeGinfes\Common\Soap;
+namespace NFePHP\NFSeSJP\Common\Soap;
 
 /**
  * SoapCode return a description os HTTP Codes returned from server
@@ -9,7 +9,7 @@ namespace NFePHP\NFSeGinfes\Common\Soap;
  * The codes and their descriptions are stored in a json file in the same folder
  *
  * @category  NFePHP
- * @package   NFePHP\NFSeGinfes
+ * @package   NFePHP\NFSeSJP
  * @copyright NFePHP Copyright (c) 2020
  * @license   http://www.gnu.org/licenses/lgpl.txt LGPLv3+
  * @license   https://opensource.org/licenses/MIT MIT
