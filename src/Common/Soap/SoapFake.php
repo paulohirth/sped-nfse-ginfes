@@ -1,12 +1,12 @@
 <?php
 
-namespace NFePHP\NFSeGinfes\Common\Soap;
+namespace NFePHP\NFSeSJP\Common\Soap;
 
 /**
  * Soap fake class used for development only
  *
  * @category  NFePHP
- * @package   NFePHP\NFSeGinfes
+ * @package   NFePHP\NFSeSJP
  * @copyright NFePHP Copyright (c) 2020
  * @license   http://www.gnu.org/licenses/lgpl.txt LGPLv3+
  * @license   https://opensource.org/licenses/MIT MIT
@@ -14,8 +14,8 @@ namespace NFePHP\NFSeGinfes\Common\Soap;
  * @author    Cleiton Perin <cperin20 at gmail dot com>
  * @link      http://github.com/nfephp-org/sped-nfse-ginfes for the canonical source repository
  */
-use NFePHP\NFSeGinfes\Common\Soap\SoapBase;
-use NFePHP\NFSeGinfes\Common\Soap\SoapInterface;
+use NFePHP\NFSeSJP\Common\Soap\SoapBase;
+use NFePHP\NFSeSJP\Common\Soap\SoapInterface;
 use NFePHP\Common\Exception\SoapException;
 use NFePHP\Common\Certificate;
 use Psr\Log\LoggerInterface;
