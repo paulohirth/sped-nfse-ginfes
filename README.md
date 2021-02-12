@@ -50,18 +50,18 @@ Este é um projeto totalmente *OpenSource*, para usa-lo e modifica-lo você não
 
 ***************** NAO FUNCIONA
 ```bash
-composer require nfephp-org/sped-nfse-ginfes:dev-master
+composer require nfephp-org/sped-nfse-sjp:dev-master
 ```
 
 *Ou ainda,*
 ```bash
-composer require nfephp-org/sped-nfse-ginfes:dev-master --prefer-dist
+composer require nfephp-org/sped-nfse-sjp:dev-master --prefer-dist
 ```
 
 *Ou ainda alterando o composer.json do seu aplicativo inserindo:*
 ```json
 "require": {
-    "nfephp-org/sped-nfse-ginfes" : "dev-master"
+    "nfephp-org/sped-nfse-sjp" : "dev-master"
 }
 ```
 
@@ -73,12 +73,12 @@ composer require nfephp-org/sped-nfse-ginfes:dev-master --prefer-dist
 
 *Após os stable realeases estarem disponíveis, este pacote poderá ser instalado com:*
 ```bash
-composer require nfephp-org/sped-nfse-ginfes
+composer require nfephp-org/sped-nfse-sjp
 ```
 Ou ainda alterando o composer.json do seu aplicativo inserindo:
 ```json
 "require": {
-    "nfephp-org/sped-sped-nfse-ginfes" : "^1.0"
+    "nfephp-org/sped-sped-nfse-sjp" : "^1.0"
 }
 ```
 
