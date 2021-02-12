@@ -1,12 +1,12 @@
 <?php
 
-namespace NFePHP\NFSeGinfes;
+namespace NFePHP\NFSeSJP;
 
 /**
  * Simple interface to RPS Class
  *
  * @category  NFePHP
- * @package   NFePHP\NFSeGinfes
+ * @package   NFePHP\NFSeSJP
  * @copyright NFePHP Copyright (c) 2020
  * @license   http://www.gnu.org/licenses/lgpl.txt LGPLv3+
  * @license   https://opensource.org/licenses/MIT MIT
