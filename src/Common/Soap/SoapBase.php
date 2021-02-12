@@ -1,12 +1,12 @@
 <?php
 
-namespace NFePHP\NFSeGinfes\Common\Soap;
+namespace NFePHP\NFSeSJP\Common\Soap;
 
 /**
  * Soap base class
  *
  * @category  NFePHP
- * @package   NFePHP\NFSeGinfes
+ * @package   NFePHP\NFSeSJP
  * @copyright NFePHP Copyright (c) 2020
  * @license   http://www.gnu.org/licenses/lgpl.txt LGPLv3+
  * @license   https://opensource.org/licenses/MIT MIT
@@ -16,7 +16,7 @@ namespace NFePHP\NFSeGinfes\Common\Soap;
  */
 
 use NFePHP\Common\Certificate;
-use NFePHP\NFSeGinfes\Common\Soap\SoapInterface;
+use NFePHP\NFSeSJP\Common\Soap\SoapInterface;
 use NFePHP\Common\Exception\SoapException;
 use NFePHP\Common\Exception\RuntimeException;
 use NFePHP\Common\Strings;
