@@ -6,7 +6,7 @@ namespace NFePHP\NFSeSJP\Common;
  * Auxiar Tools Class for comunications with NFSe webserver in Ginfes Standard
  *
  * @category  NFePHP
- * @package   NFePHP\NFSeGinfes
+ * @package   NFePHP\NFSeSJP
  * @copyright NFePHP Copyright (c) 2020
  * @license   http://www.gnu.org/licenses/lgpl.txt LGPLv3+
  * @license   https://opensource.org/licenses/MIT MIT
